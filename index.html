@@ -2822,7 +2822,7 @@ function renderizarMapa() {
   riftSlot.className='map-rift-slot';
   riftSlot.id='mapRiftSlot';
   const gr=generarGrietaSecreta();
-  riftSlot.innerHTML=`<svg class="map-rift-svg" id="mapRiftSvg" viewBox="0 0 500 140" preserveAspectRatio="none" aria-hidden="true"><path class="map-rift-shadow" pathLength="100" d="${gr.izq}"/><path class="map-rift-shadow" pathLength="100" d="${gr.der}"/><path class="map-rift-line" pathLength="100" d="${gr.izq}"/><path class="map-rift-line" pathLength="100" d="${gr.der}"/><g class="map-rift-branches"><path class="map-rift-branch" pathLength="100" d="${gr.ramaIzq}"/><path class="map-rift-branch" pathLength="100" d="${gr.ramaDer}"/></g></svg><button id="btnRiftBoss" class="map-rift-node" type="button" disabled aria-label="Una anomalía incrustada en la grieta" title="La anomalía todavía está dormida"><span aria-hidden="true">7</span></button>`;
+  riftSlot.innerHTML=`<svg class="map-rift-svg" id="mapRiftSvg" viewBox="0 0 500 140" preserveAspectRatio="none" aria-hidden="true"><path class="map-rift-shadow" pathLength="100" d="${gr.izq}"/><path class="map-rift-shadow" pathLength="100" d="${gr.der}"/><path class="map-rift-line" pathLength="100" d="${gr.izq}"/><path class="map-rift-line" pathLength="100" d="${gr.der}"/><g class="map-rift-branches"><path class="map-rift-branch" pathLength="100" d="${gr.ramaIzq}"/><path class="map-rift-branch" pathLength="100" d="${gr.ramaDer}"/></g></svg><button id="btnRiftBoss" class="map-rift-node" type="button" disabled aria-label="Una anomalía incrustada en la grieta" title="La anomalía todavía está dormida"><span aria-hidden="true">5</span></button>`;
   riftSlot.querySelector('#btnRiftBoss').addEventListener('click',iniciarJefeGrieta);
   fragment.appendChild(riftSlot);
   if(localStorage.getItem('iupacCreditosV1')==='1'){
@@ -2921,7 +2921,7 @@ function actualizarGrietaMapa(){
   stage.style.setProperty('--rift-branch-scale','1');
   stage.style.setProperty('--rift-node-scale',String(.55+porcentaje*.0045));
   gate.disabled=!abierta;
-  gate.setAttribute('aria-label',abierta?(derrotada?'Volver a combatir contra el jefe final':'Nodo 7: entidad corrupta, entrar al jefe final'):(porcentaje>0?'Cubo negro incrustado en la grieta':'La grieta todavía no ha aparecido'));
+  gate.setAttribute('aria-label',abierta?(derrotada?'Volver a combatir contra el jefe final':'Nodo 5: entidad corrupta, entrar al jefe final'):(porcentaje>0?'Cubo negro incrustado en la grieta':'La grieta todavía no ha aparecido'));
   gate.title=abierta?(derrotada?'Volver a combatir':'La anomalía está activa'):(porcentaje>0?'Algo permanece dentro de la grieta':'Todavía no hay nada visible');
 }
 
